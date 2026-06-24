@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简报 · 2026年6月24日 早刊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #1a1a1a;
+    --dark: #2c2c2c;
+    --gray: #8a8a8a;
+    --light-gray: #e0e0e0;
+    --very-light: #f3f3f3;
+    --white: #ffffff;
+    --accent: #b31b1b;
+    --measure: 680px;
+  }
+
+  body {
+    font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── Header ── */
+  header {
+    padding: 64px 0 40px;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 56px;
+  }
+
+  .header-meta {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 20px;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  .header-meta span { color: var(--accent); }
+
+  h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .subhead {
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 400;
+    font-style: italic;
+    max-width: var(--measure);
+  }
+
+  /* ── Cover Story (text-only) ── */
+  .cover-story {
+    margin-bottom: 72px;
+  }
+
+  .cover-story .label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  .cover-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 36px 0 36px 0;
+    border-top: 3px solid var(--black);
+    border-bottom: 1px solid var(--light-gray);
+    transition: background-color 0.2s;
+    position: relative;
+  }
+
+  .cover-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .cover-link:hover::before { opacity: 1; }
+  .cover-link:hover { background: var(--very-light); }
+
+  .cover-link h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .cover-link .cover-excerpt {
+    font-size: 16px;
+    color: var(--dark);
+    max-width: 620px;
+    margin-bottom: 16px;
+  }
+
+  .cover-link .cover-meta {
+    font-size: 12px;
+    color: var(--gray);
+    font-style: italic;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  .cover-link .cover-meta .arrow {
+    color: var(--accent);
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Decorative pull quote ── */
+  .pull-quote {
+    margin: 32px 0 48px;
+    padding: 24px 0 24px 32px;
+    border-left: 2px solid var(--accent);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--black);
+    font-style: italic;
+    max-width: 600px;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .pull-quote .attr {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-top: 8px;
+    font-style: normal;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 28px;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  /* ── Card Grid (text-only) ── */
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .article-grid.triple {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-top: 2px solid var(--light-gray);
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+
+  .article-card:hover {
+    background: var(--very-light);
+    border-color: var(--light-gray);
+    border-top-color: var(--accent);
+  }
+
+  .article-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .article-card .card-summary {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .article-card .card-footer {
+    font-size: 11px;
+    color: var(--accent);
+    font-family: 'PT Serif', Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Stats ── */
+  .stats-bar {
+    margin: 64px 0;
+    padding: 36px 0;
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-item .num {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .stat-item .label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 8px;
+    font-family: 'PT Serif', Georgia, serif;
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 40px 0 80px;
+    color: var(--gray);
+    font-size: 12px;
+    font-family: 'PT Serif', Georgia, serif;
+    font-style: italic;
+  }
+
+  footer .divider {
+    border: none;
+    border-top: 1px solid var(--light-gray);
+    margin-bottom: 24px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 800px) {
+    .container { padding: 0 24px; }
+    h1 { font-size: 36px; }
+    .cover-link h2 { font-size: 28px; }
+    .article-grid { grid-template-columns: 1fr; gap: 20px; }
+    .article-grid.triple { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .pull-quote { font-size: 17px; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="header-meta">Issue <span>2401</span> · June 24, 2026 · Morning Edition</div>
+    <h1>简报</h1>
+    <p class="subhead">AI Agent 时代的全景、工具与生态 · 本期覆盖 8 个方向的实时采集与深度处理</p>
+  </header>
+
+  <!-- Cover Story -->
+  <div class="cover-story">
+    <div class="label">Cover Story</div>
+    <a href="http://m.toutiao.com/group/7654521297263493632/" class="cover-link" target="_blank" rel="noopener">
+      <h2>Agent 不是聊天机器人：<br>2026 年技术全景拆解</h2>
+      <p class="cover-excerpt">行业最大的变化不在模型本身，而在模型的使用方式。AI 正在从"回答问题"进化到"完成任务"。2026 年的 Agent 框架之争已进入生态竞争阶段，而非单一功能竞争。</p>
+      <p class="cover-meta">来源 · 头条文章 · <span class="arrow">Read original →</span></p>
+    </a>
+  </div>
+
+  <!-- Pull Quote -->
+  <div class="pull-quote">
+    "AI 不再是对话框里的助手，而是聊天中的'第三方参与者'——这是 Agent 落地最大的场景。"
+    <span class="attr">— 微信 AI × A2A 协议</span>
+  </div>
+
+  <!-- Section: AI前沿 Agent生态 -->
+  <div class="section">
+    <div class="section-title">AI 前沿 · Agent 生态</div>
+    <div class="article-grid">
+      <a href="https://blog.csdn.net/sdgfafg_25/article/details/150384744" class="article-card" target="_blank" rel="noopener">
+        <h3>Agent 四大协议分层解析</h3>
+        <p class="card-summary">MCP 管工具、ACP 管本地协作、A2A 管跨平台通信、ANP 指向未来。一个正在成型的分层协议栈正在构建 Agent 的互联网基础设施。</p>
+        <span class="card-footer">Read original →</span>
+      </a>
+      <a href="https://blog.csdn.net/starzhou/article/details/160644747" class="article-card" target="_blank" rel="noopener">
+        <h3>Hermes 与 OpenClaw 的框架哲学之争</h3>
+        <p class="card-summary">开放集市模式 vs 精品旗舰模式——Agent 工具发展的根本矛盾：开放生态还是可控体验？同期还爆出开源圈的抄袭争议。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section: 微信AI -->
+  <div class="section">
+    <div class="section-title">行业 · 巨头入局</div>
+    <div class="article-grid" style="grid-template-columns: 2fr 1fr;">
+      <a href="http://m.toutiao.com/group/7650051718587122176/" class="article-card" target="_blank" rel="noopener">
+        <h3>微信 AI 内测：当 A2A 遇到超级 APP</h3>
+        <p class="card-summary">微信正在测试 AI 直接参与用户聊天，Google 的 A2A 协议则提供了技术底座。AI 不再是对话框里的助手，而是聊天中的"第三方参与者"——这可能是 Agent 落地最大的场景。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+      <a href="http://m.toutiao.com/group/7650051718587122176/" class="article-card" target="_blank" rel="noopener">
+        <h3>AI 进入业务工作流</h3>
+        <p class="card-summary">从产线到设计再到客服，AI 正在从一个"回答问题"的工具进化为"参与工作流"的操作系统层。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section: AI编程 -->
+  <div class="section">
+    <div class="section-title">开发范式 · AI-Loop</div>
+    <div class="article-grid triple">
+      <a href="http://m.toutiao.com/group/7653680698133447187/" class="article-card" target="_blank" rel="noopener">
+        <h3>Cursor 统治力与 AI 编程工具竞争</h3>
+        <p class="card-summary">"四势二封"格局：Cursor 领跑，Claude Code、Codex、Copilot 各有短板。国产 AI 编程助手集体翻车事件引发热议。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+      <a href="http://m.toutiao.com/group/7653680698133447187/" class="article-card" target="_blank" rel="noopener">
+        <h3>Cursor 的成功公式</h3>
+        <p class="card-summary">全仓感知 + Composer Agent 模式 + 用户增长飞轮 = 10 亿到 80 亿美元的跳跃。真正让开发进入 AI-Loop 时代。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+      <a href="http://m.toutiao.com/group/7653491234657075752/" class="article-card" target="_blank" rel="noopener">
+        <h3>AI 编程的槽点与痛点</h3>
+        <p class="card-summary">"像请了个只会背答案的实习生"——"三份烂代码一个比一个离谱"，开发者对 AI 编程工具的吐槽真实反映了当前技术的边界。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section: 一人公司 -->
+  <div class="section">
+    <div class="section-title">创业 · 一人公司</div>
+    <div class="article-grid">
+      <a href="http://m.toutiao.com/group/7654766271019418147/" class="article-card" target="_blank" rel="noopener">
+        <h3>一人公司两极分化：4 亿 vs 3 万</h3>
+        <p class="card-summary">2026 年新创业中 36.3% 是一人模式。有人做到 4 亿美元估值，有人亏了 3 万元收场。AI 降低了入场门槛，但没降低成功门槛。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+      <a href="http://m.toutiao.com/group/7654550206263968283/" class="article-card" target="_blank" rel="noopener">
+        <h3>AI 电商黄金元年</h3>
+        <p class="card-summary">东莞卖家用 AI 工具月销百万。AI+POD 轻资产模式让一个人在家就能运营跨境电商——独立站成交增速达 45%。</p>
+        <span class="card-footer">Open note →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="num">9</div>
+      <div class="label">素材入库</div>
+    </div>
+    <div class="stat-item">
+      <div class="num">8</div>
+      <div class="label">知识笔记</div>
+    </div>
+    <div class="stat-item">
+      <div class="num">2</div>
+      <div class="label">连接发现</div>
+    </div>
+    <div class="stat-item">
+      <div class="num">4</div>
+      <div class="label">cao 趣味素材</div>
+    </div>
+  </div>
+
+  <footer>
+    <hr class="divider">
+    <p>Generated by Automated Knowledge System · Huashu Design Engine</p>
+    <p>Data collected · processed · designed on June 24, 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
